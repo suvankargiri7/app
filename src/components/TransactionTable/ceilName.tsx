@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from "react";
-
+import "../../../node_modules/flag-icons/csS/flag-icons.min.css";
 import { Box, Typography } from "@mui/material";
 
 interface ceilNameProps {
@@ -13,7 +13,7 @@ const CeilName: FunctionComponent<ceilNameProps> = (props) => {
     return (
       <Box display={"flex"}>
         {props.country}
-        <Box className={`fi fi-${props.country}`}></Box>  
+        <span className={`fi fi-${props.country}`}></span>
         <Typography paddingLeft={2}>{props.name}</Typography>
       </Box>
     );

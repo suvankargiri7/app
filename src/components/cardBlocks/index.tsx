@@ -11,10 +11,10 @@ const CardBlocks: FunctionComponent<CardBlocksProps> = (props) => {
     <Grid container xs={12}>
       <Grid item xs={12} md={6} lg={4}>
         <Card sx={{ display: "flex", height: "150px", width: '400px' }}>
-          <Box display={"flex"} flexDirection={"row"}>
-            <Box>
+          <Box display={"flex"} flexDirection={"row"} alignItems={'center'}>
+            <Box paddingX={2}>
               <IconButton>
-                <CurrencyExchangeIcon />
+                <CurrencyExchangeIcon color="primary"/>
               </IconButton>
             </Box>
             <Box>
@@ -40,14 +40,14 @@ const CardBlocks: FunctionComponent<CardBlocksProps> = (props) => {
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
         <Card sx={{ display: "flex", height: "150px", width: '400px'}}>
-          <Box display={"flex"} flexDirection={"row"}>
-            <Box>
+          <Box display={"flex"} flexDirection={"row"} padding={2}>
+            <Box paddingX={2}>
               <IconButton>
-                <ReceiptLongIcon />
+                <ReceiptLongIcon color="warning"/>
               </IconButton>
             </Box>
             <Box>
-              <Box display={"flex"} flexDirection={"row"}>
+              <Box display={"flex"} flexDirection={"row"} marginBottom={2}>
                 <Typography variant="h5" color={"warning"}>
                   Total Amount
                 </Typography>
@@ -60,7 +60,7 @@ const CardBlocks: FunctionComponent<CardBlocksProps> = (props) => {
                 flexDirection={"row"}
                 alignItems={"baseline"}
               >
-                <Typography variant="h6" color={"primary"}>
+                <Typography variant="h6" color={"primary"} paddingRight={1}>
                   200k
                 </Typography>
                 <Typography textTransform={"uppercase"} alignItems={"end"}>
@@ -73,10 +73,10 @@ const CardBlocks: FunctionComponent<CardBlocksProps> = (props) => {
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
         <Card sx={{ display: "flex", height: "150px", width: '400px'}}>
-          <Box display={"flex"} flexDirection={"row"}>
+          <Box display={"flex"} flexDirection={"row"} padding={2}>
             <Box marginLeft={4}>
               <IconButton>
-                <ReceiptLongIcon />
+                <ReceiptLongIcon color="warning"/>
               </IconButton>
             </Box>
             <Box>
@@ -89,7 +89,7 @@ const CardBlocks: FunctionComponent<CardBlocksProps> = (props) => {
                 flexDirection={"row"}
                 alignItems={"baseline"}
               >
-                <Typography variant="h6" color={"primary"}>
+                <Typography variant="h6" color={"primary"} paddingRight={1}>
                   200k
                 </Typography>
                 <Typography textTransform={"uppercase"} alignItems={"end"}>
