@@ -191,19 +191,12 @@ const EnhancedTableHead = (props: EnhancedTableProps) => {
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
-          <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            inputProps={{
-              "aria-label": "select all desserts",
-            }}
-          />
+          <></>
         </TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.numeric ? "right" : "left"}
+            align={"left"}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
           >
@@ -247,22 +240,6 @@ const TransactionTableBlocks: FunctionComponent<TransactionTableProps> = (
     selected.indexOf(invoice_no) !== -1;
 
   const handleClick = (event: MouseEvent<unknown>, invoice_no: string) => {
-    const selectedIndex = selected.indexOf(invoice_no);
-    let newSelected: readonly string[] = [];
-
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, invoice_no);
-    } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1));
-    } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1));
-    } else if (selectedIndex > 0) {
-      newSelected = newSelected.concat(
-        selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1)
-      );
-    }
-
     setSelected(invoice_no);
   };
 
