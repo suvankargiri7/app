@@ -1,5 +1,4 @@
 import { FunctionComponent, useState } from "react";
-import "../../../node_modules/flag-icons/csS/flag-icons.min.css";
 import { Box, Typography } from "@mui/material";
 
 interface ceilNameProps {
