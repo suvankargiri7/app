@@ -17,7 +17,7 @@ import CeilStatus from "./ceilStatus";
 import CeilOptions from "./ceilOptions";
 import CeilInvoice from "./ceilInvoice";
 import CeilDate from "./ceilDate";
-import CeilUsd from "./ceilUsdEqual";
+import CeilUsd from "./ceilUsd";
 
 type TransactionTableProps = {};
 
